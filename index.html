@@ -4,18 +4,54 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <h1 id="title">How Well Do You Know Cornelius Fudge?</h1>
+    <style>
+        body{
+            font-family: sans-serif;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+        label{
+            display: block;
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+        input {
+            display: block;
+        }
+        .radio-inline{
+            display: inline-block;
+        }
+        form {
+            background-color: lightgrey;
+        }
+    </style>
 </head>
 <body>
+    <h1 id="title">How Well Do You Know Cornelius Fudge?</h1>
     <p id="description">A survey where you can tell us something no one knows about Fudge.</p>
     <form id="survey-form">
-        <label id="name-label">Name:</label> 
-        <input type="text" name="name" id="name" required placeholder="Full Name"/>
-        <label id="email-label">Email:</label> 
-        <input type="email" name="email" id="email" required placeholder="Email"/>
-        <label id="number-label">Number:</label> 
-        <input type="number" name="number" min ="0" max ="50"id="number" required placeholder="Number" />
-        <input type="submit" />
+        <label id="name-label">Name:</label>
+        <input type="text" name="name" id="name" required placeholder="Full Name" />
+        <label id="email-label">Email:</label>
+        <input type="email" name="email" id="email" required placeholder="Email" />
+        <label id="number-label">Number:</label>
+        <input type="number" name="number" min="0" max="50" id="number" required placeholder="Number" />
+        <select id="dropdown" name="works">
+            <option value="Junior Minister">Junior Minister</option>
+            <option value="Minister of Magic">Minister of Magic</option>
+            <option value="Advisor to Minister of Magic">Advisor to Minister of Magic</option>
+            <option value="Quidditch World Cup Organizer">Quidditch World Cup Organizer</option>
+        </select>
+        <br />
+        <input type="radio" class="radio-inline" name="blood-status" value="Pure blood"/>Pure Blood<br />
+        <input type="radio" class="radio-inline" name="blood-status" value="Half blood" />Half Blood <br />
+        <input type="radio" class="radio-inline" name="blood-status" value="Muggle-born" />Muggle-born <br />
+
+        <input type="checkbox" name="how-many" value="Less than 5" />I know less than 5 <br />
+        <input type="checkbox" name="how-many" value="Less than 10" />I know less than 10 <br />
+        <input type="checkbox" name="how-many" value="More than 10" />I know more than 10 <br />
+        <textarea id="story" placeholder="Tell Us What You Know"></textarea>
+        <input type="submit" id="submit"/>
     </form>
     <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
